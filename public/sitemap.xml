@@ -6,7 +6,7 @@
   
   <!-- Main Home & Simple Calculator -->
   <url>
-    <loc>https://onlinecalculator.app/</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Standard Calculator -->
   <url>
-    <loc>https://onlinecalculator.app/#calculator</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#calculator</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
@@ -22,7 +22,7 @@
 
   <!-- Scientific Calculator (Trigonometry, Logarithms & Powers) -->
   <url>
-    <loc>https://onlinecalculator.app/#scientific-panel</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#scientific-panel</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
@@ -30,7 +30,7 @@
 
   <!-- Percentage Calculator Tool -->
   <url>
-    <loc>https://onlinecalculator.app/#tool-percentage</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#tool-percentage</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -38,7 +38,7 @@
 
   <!-- Discount & GST / Tax Calculator Tool -->
   <url>
-    <loc>https://onlinecalculator.app/#tool-discount</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#tool-discount</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -46,7 +46,7 @@
 
   <!-- Universal Unit Converter Tool -->
   <url>
-    <loc>https://onlinecalculator.app/#tool-unit</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#tool-unit</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -54,7 +54,7 @@
 
   <!-- Body Mass Index (BMI) Health Calculator Tool -->
   <url>
-    <loc>https://onlinecalculator.app/#tool-bmi</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#tool-bmi</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -62,7 +62,7 @@
 
   <!-- Exact Age & Birthday Calculator Tool -->
   <url>
-    <loc>https://onlinecalculator.app/#tool-age</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#tool-age</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -70,7 +70,7 @@
 
   <!-- SILO Topical Authority Hubs -->
   <url>
-    <loc>https://onlinecalculator.app/#silo-section</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#silo-section</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -78,7 +78,7 @@
 
   <!-- Mathematical Guides, Formulas & PEMDAS Rules -->
   <url>
-    <loc>https://onlinecalculator.app/#guides-section</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#guides-section</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
@@ -86,7 +86,7 @@
 
   <!-- Official Scientific & Government Standards Resources -->
   <url>
-    <loc>https://onlinecalculator.app/#resources-section</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#resources-section</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -94,7 +94,7 @@
 
   <!-- Frequently Asked Questions (FAQ) -->
   <url>
-    <loc>https://onlinecalculator.app/#faq-section</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#faq-section</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
@@ -102,7 +102,7 @@
 
   <!-- E-E-A-T Verification & Methodology -->
   <url>
-    <loc>https://onlinecalculator.app/#about-methodology</loc>
+    <loc>https://online-calculator-nine-chi.vercel.app/#about-methodology</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>

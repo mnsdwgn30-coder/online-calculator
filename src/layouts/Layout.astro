@@ -8,10 +8,10 @@ interface Props {
 const { 
   title = "Simple Calculator - Modern Online Calculator & Math Suite",
   description = "A free, production-ready online calculator featuring standard and scientific arithmetic, SILO math hubs, history tape, unit converter, percentage, discount/GST, BMI, and age tools.",
-  canonical = "https://onlinecalculator.app/"
+  canonical = "https://online-calculator-nine-chi.vercel.app/"
 } = Astro.props;
 
-const siteUrl = "https://onlinecalculator.app";
+const siteUrl = "https://online-calculator-nine-chi.vercel.app";
 const ogImageUrl = `${siteUrl}/favicon.svg`;
 
 // Comprehensive Schema.org Graph for Semantic SEO & Rich Results
@@ -190,6 +190,7 @@ const schemaGraph = {
     <meta name="keywords" content="online calculator, scientific calculator, simple calculator, percentage calculator, unit converter, bmi calculator, age calculator, math tools, silo math, pemdas calculator" />
     <meta name="author" content="Online Calculator" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="google-site-verification" content="google89677dbb47731159" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonical} />

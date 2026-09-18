@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://onlinecalculator.app/sitemap.xml
+Sitemap: https://online-calculator-nine-chi.vercel.app/sitemap.xml
