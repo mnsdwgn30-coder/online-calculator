@@ -1,0 +1,81 @@
+---
+// Official Resources & Outbound Authority Links Component
+const resources = [
+  {
+    category: "Metrology & Measurement",
+    name: "NIST Reference on Constants, Units & Uncertainty",
+    source: "National Institute of Standards and Technology (U.S. Dept of Commerce)",
+    url: "https://physics.nist.gov/cuu/Units/",
+    desc: "Official definitions of the International System of Units (SI), metric prefixes, and fundamental physical constants."
+  },
+  {
+    category: "World Health Standards",
+    name: "WHO Body Mass Index (BMI) Global Database",
+    source: "World Health Organization",
+    url: "https://www.who.int/data/gho/data/themes/theme-details/GHO/body-mass-index-(bmi)",
+    desc: "Official international BMI cutoff points and health classification criteria for adults and adolescents."
+  },
+  {
+    category: "Mathematics & Computation",
+    name: "W3C MathML & Web Mathematical Standard",
+    source: "World Wide Web Consortium (W3C)",
+    url: "https://www.w3.org/Math/",
+    desc: "Official web standard for encoding mathematical notation and content on the internet."
+  },
+  {
+    category: "Taxation & Finance",
+    name: "CBIC GST Rates & Invoicing Standards",
+    source: "Government of India (CBIC)",
+    url: "https://www.cbic.gov.in/",
+    desc: "Official GST tax slabs, HSN/SAC codes, and tax calculation guidelines."
+  },
+  {
+    category: "Mathematical Knowledgebase",
+    name: "Wolfram MathWorld Encyclopedia",
+    source: "Wolfram Research",
+    url: "https://mathworld.wolfram.com/",
+    desc: "Comprehensive web resource for mathematical definitions, trigonometric identities, and algebraic algorithms."
+  },
+  {
+    category: "Web Framework",
+    name: "Astro Official Documentation",
+    source: "Astro Build",
+    url: "https://docs.astro.build/",
+    desc: "Official documentation and architecture guidelines for the Astro modern web framework."
+  }
+];
+---
+
+<section class="resources-section" id="resources-section">
+  <div class="section-header">
+    <div class="section-badge">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span>Authoritative Sources & References</span>
+    </div>
+    <h2 class="section-title">Official Scientific & Government Standards</h2>
+    <p class="section-subtitle">Trusted international references and documentation backing our calculation engines</p>
+  </div>
+
+  <div class="resources-grid">
+    {resources.map((item) => (
+      <a href={item.url} target="_blank" rel="noopener noreferrer" class="resource-card" title={item.name}>
+        <div class="resource-top">
+          <span class="resource-category">{item.category}</span>
+          <svg class="ext-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </div>
+        <h3 class="resource-name">{item.name}</h3>
+        <p class="resource-desc">{item.desc}</p>
+        <div class="resource-footer">
+          <span class="resource-source">{item.source}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

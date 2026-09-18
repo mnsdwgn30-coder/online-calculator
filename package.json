@@ -1,0 +1,16 @@
+{
+  "name": "online-calculator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Modern Single Page Online Calculator built with Astro",
+  "scripts": {
+    "dev": "astro dev --host --ignore-lock",
+    "start": "astro dev --host --ignore-lock",
+    "build": "astro build",
+    "preview": "astro preview --host",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.3"
+  }
+}

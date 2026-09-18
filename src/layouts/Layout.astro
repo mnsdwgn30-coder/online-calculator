@@ -1,0 +1,242 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { 
+  title = "Simple Calculator - Modern Online Calculator & Math Suite",
+  description = "A free, production-ready online calculator featuring standard and scientific arithmetic, SILO math hubs, history tape, unit converter, percentage, discount/GST, BMI, and age tools.",
+  canonical = "https://onlinecalculator.app/"
+} = Astro.props;
+
+const siteUrl = "https://onlinecalculator.app";
+const ogImageUrl = `${siteUrl}/favicon.svg`;
+
+// Comprehensive Schema.org Graph for Semantic SEO & Rich Results
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Simple Online Calculator",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/favicon.svg`,
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://github.com",
+        "https://twitter.com"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "Simple Online Calculator",
+      "publisher": { "@id": `${siteUrl}/#organization` },
+      "inLanguage": "en-US",
+      "description": description
+    },
+    {
+      "@type": "WebApplication",
+      "@id": `${siteUrl}/#webapp`,
+      "name": "Simple Online Calculator & Math Suite",
+      "url": siteUrl,
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All modern browsers (Chrome, Edge, Safari, Firefox)",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "softwareVersion": "7.3.3",
+      "inLanguage": "en-US",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Standard 4-Function Arithmetic (+, −, ×, ÷, %)",
+        "Scientific Calculator with Trigonometry (sin, cos, tan), Logarithms (log, ln), and Powers (xʸ)",
+        "Radian (RAD) and Degree (DEG) Angle Switching",
+        "Persistent Calculation History Tape with Recall",
+        "Interactive Percentage Calculator",
+        "Discount & GST/Tax Payable Calculator",
+        "Universal Metric/Imperial Unit Converter",
+        "Body Mass Index (BMI) Health Calculator",
+        "Exact Chronological Age & Birthday Calculator",
+        "Tactile Synthesized Audio Feedback & Full Keyboard Navigation",
+        "Light & Dark Mode Glassmorphism Interface"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": siteUrl
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculator",
+          "item": `${siteUrl}#calculator`
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SILO Calculation Hubs",
+          "item": `${siteUrl}#silo-section`
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Precision Math Suite",
+          "item": `${siteUrl}#tools-section`
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I switch between Standard and Scientific mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click on the 'SCI' button at the top right of the calculator header. This will instantly expand the scientific keypad featuring Trigonometry (sin, cos, tan), Logarithms (log, ln), Square Root, Powers, Constants (π, e), and Factorial (n!)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this calculator support physical keyboard shortcuts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! You can use your physical numpad and keyboard: 0-9 for digits, + - * / for basic operators, Enter/= to evaluate, Backspace to delete, and Esc to clear (AC)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the calculation history work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Past calculations are saved locally in your browser storage. Click the clock icon in the header to open the history drawer. Click any past calculation to restore it into the active display."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I toggle between Radians and Degrees for Trigonometry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Scientific mode, click the 'RAD' / 'DEG' button on the bottom-right of the scientific panel to toggle between Radians and Degrees angle modes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my calculation data private and secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100% private. All computations and history are evaluated locally on your device without sending any calculation telemetry to external servers."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": `${siteUrl}/#howto-percentage`,
+      "name": "How to Calculate a Percentage Online",
+      "description": "Calculate the percentage of any number accurately using the percentage tool.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enter the percentage rate",
+          "text": "Type the rate (e.g., 20 for 20%) into the rate input box."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Enter the base number",
+          "text": "Type the total amount (e.g., 500) into the number field."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Read instant result",
+          "text": "The calculated result (e.g., 100) displays instantly in real time."
+        }
+      ]
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="online calculator, scientific calculator, simple calculator, percentage calculator, unit converter, bmi calculator, age calculator, math tools, silo math, pemdas calculator" />
+    <meta name="author" content="Online Calculator" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+
+    <!-- Favicon & PWA Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Theme & Color Scheme -->
+    <meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f0f4f8" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="Simple Online Calculator" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Structured Data (JSON-LD Semantic Graph) -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Ambient Background Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <slot />
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+# Online Calculator (Simple & Scientific)
+
+> A modern, responsive single-page web application offering Standard & Scientific calculation, quick math tools (Percentage, Discount/GST, Unit Converter, BMI, Age), and calculation history tape with full keyboard support and zero tracking.
+
+## Website Overview
+- **Name**: Online Calculator / Simple Calculator
+- **URL**: https://onlinecalculator.app/
+- **Technology Stack**: Astro, Vanilla JavaScript (ESNext), Modern Glassmorphism CSS
+- **Licensing**: Free for public use
+
+## Core Features & Capabilities
+
+### 1. Main Calculator Engine
+- **Standard Arithmetic**: Addition (+), Subtraction (−), Multiplication (×), Division (÷), Modulo (%), Parentheses `( )`, Negate (±).
+- **Scientific Mode**:
+  - Trigonometry: `sin`, `cos`, `tan` (Radians and Degrees mode support)
+  - Logarithms: `log` (base 10), `ln` (natural log)
+  - Powers & Roots: `x²`, `xʸ`, `√`
+  - Constants: `π` (Math.PI ≈ 3.1415926535), `e` (Math.E ≈ 2.7182818284)
+  - Factorials: `n!`
+- **History Tape**: Persists up to 30 past calculations locally in `localStorage`, supporting instant expression and result recall.
+- **Physical Keyboard Support**: Enter/= for equals, Backspace for delete, Esc for all clear, numpad numbers, and standard operators.
+- **Audio Feedback**: Synthesized acoustic click toggled via Web Audio API.
+
+### 2. Built-In Auxiliary Tools
+- **Percentage Calculator**: Instant computation of percentage of any number.
+- **Discount & GST/Tax Calculator**: Calculates discount savings, GST additions, and final payable amount.
+- **Universal Unit Converter**: Conversion across metric and imperial systems for Length, Weight, and Temperature.
+- **BMI Health Calculator**: Weight & Height to Body Mass Index score with category classification.
+- **Age Calculator**: Precise calculation of years, months, days lived and days remaining until next birthday.
+
+### 3. Theme & Accessibility
+- Dark Mode & Light Mode one-click theme switcher.
+- WCAG compliant color contrasts and responsive mobile-first viewport design.
+- Full privacy guarantee: calculations are evaluated locally on client devices without external server telemetry.

@@ -1,0 +1,108 @@
+---
+// SILO Architecture Topical Authority Hub
+const silos = [
+  {
+    id: "silo-math",
+    title: "1. Core Mathematics & Computing",
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="3"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="14"></line></svg>`,
+    badge: "Core Math SILO",
+    desc: "Standard four-function arithmetic, algebraic expressions, parentheses precedence, and scientific trigonometrics.",
+    links: [
+      { label: "Standard Arithmetic Calculator", url: "#calculator" },
+      { label: "Scientific Keypad (Trig & Logs)", url: "#calculator" },
+      { label: "Order of Operations Guide (PEMDAS)", url: "#guides-section" },
+      { label: "Wolfram MathWorld Documentation", url: "https://mathworld.wolfram.com/", isExt: true }
+    ]
+  },
+  {
+    id: "silo-finance",
+    title: "2. Financial & Commercial Math",
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`,
+    badge: "Finance SILO",
+    desc: "Business percentage computation, retail discount calculations, GST/sales tax additions, and profit margins.",
+    links: [
+      { label: "Percentage Calculation Tool", url: "#tool-percentage" },
+      { label: "Discount & GST Payable Calculator", url: "#tool-discount" },
+      { label: "Discount & Tax Formulas Guide", url: "#guides-section" },
+      { label: "CBIC Official GST Rates & Norms", url: "https://www.cbic.gov.in/", isExt: true }
+    ]
+  },
+  {
+    id: "silo-units",
+    title: "3. Metrology & Unit Conversion",
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>`,
+    badge: "Scientific SILO",
+    desc: "Metric and Imperial standard conversions across Length, Mass/Weight, and Temperature scales.",
+    links: [
+      { label: "Universal Unit Converter", url: "#tool-unit" },
+      { label: "NIST Metric SI Units Standard", url: "https://physics.nist.gov/cuu/Units/", isExt: true },
+      { label: "BIPM International Metrology Hub", url: "https://www.bipm.org/en/measurement-units/", isExt: true }
+    ]
+  },
+  {
+    id: "silo-health",
+    title: "4. Health & Biometric Metrics",
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`,
+    badge: "Health SILO",
+    desc: "Body Mass Index (BMI) computations mapped to World Health Organization clinical risk thresholds.",
+    links: [
+      { label: "BMI Score & Health Calculator", url: "#tool-bmi" },
+      { label: "WHO BMI Cutoff Points Scale", url: "#guides-section" },
+      { label: "WHO Global Health Observatory Data", url: "https://www.who.int/data/gho/data/themes/theme-details/GHO/body-mass-index-(bmi)", isExt: true },
+      { label: "CDC Healthy Weight Guidelines", url: "https://www.cdc.gov/healthyweight/assessing/bmi/index.html", isExt: true }
+    ]
+  },
+  {
+    id: "silo-time",
+    title: "5. Chronology & Date Mathematics",
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`,
+    badge: "Chronology SILO",
+    desc: "Exact chronological age calculation (years, months, days) with Gregorian leap-year adjustments.",
+    links: [
+      { label: "Exact Age & Birthday Calculator", url: "#tool-age" },
+      { label: "Frequently Asked Questions", url: "#faq-section" },
+      { label: "Gregorian Calendar Wiki", url: "https://en.wikipedia.org/wiki/Gregorian_calendar", isExt: true }
+    ]
+  }
+];
+---
+
+<section class="silo-section" id="silo-section">
+  <div class="section-header">
+    <div class="section-badge">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+        <polyline points="2 17 12 22 22 17"></polyline>
+        <polyline points="2 12 12 17 22 12"></polyline>
+      </svg>
+      <span data-i18n="silo_badge">SILO Information Architecture</span>
+    </div>
+    <h2 class="section-title" data-i18n="silo_title">Topical Authority & Calculation Hubs</h2>
+    <p class="section-subtitle" data-i18n="silo_subtitle">Every tool, formula, and reference organized within 2 clicks of navigation</p>
+  </div>
+
+  <div class="silo-grid">
+    {silos.map((silo) => (
+      <article class="silo-card" id={silo.id}>
+        <div class="silo-header">
+          <div class="silo-icon-wrap" set:html={silo.icon} />
+          <div>
+            <span class="silo-badge">{silo.badge}</span>
+            <h3 class="silo-title">{silo.title}</h3>
+          </div>
+        </div>
+        <p class="silo-desc">{silo.desc}</p>
+        <ul class="silo-links-list">
+          {silo.links.map((link) => (
+            <li>
+              <a href={link.url} target={link.isExt ? "_blank" : "_self"} rel={link.isExt ? "noopener noreferrer" : undefined} class="silo-link">
+                <span>{link.label}</span>
+                {link.isExt ? <span class="ext-tag">&#8599;</span> : <span class="arrow-tag">&rarr;</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>

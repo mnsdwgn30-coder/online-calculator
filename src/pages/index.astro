@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Calculator from '../components/Calculator.astro';
+import PopularTools from '../components/PopularTools.astro';
+import ExtraTools from '../components/ExtraTools.astro';
+import SiloHub from '../components/SiloHub.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import MathGuides from '../components/MathGuides.astro';
+import EeatTrustBadge from '../components/EeatTrustBadge.astro';
+import OfficialResources from '../components/OfficialResources.astro';
+import FaqSection from '../components/FaqSection.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Simple Calculator - The Fast, Free & Private Online Calculator Suite">
+  <!-- Semantic Breadcrumb Navigation -->
+  <Breadcrumbs />
+
+  <!-- Conversion-Focused Hero -->
+  <HeroSection />
+
+  <!-- Primary Interactive Calculator Tool -->
+  <Calculator />
+
+  <!-- Popular & Featured Tools Showcase -->
+  <PopularTools />
+
+  <!-- Auxiliary Calculation & Finance Tools -->
+  <ExtraTools />
+
+  <!-- SILO Architecture & Category Directory -->
+  <SiloHub />
+
+  <!-- Key Benefits & Value Proposition -->
+  <BenefitsSection />
+
+  <!-- How It Works Interactive Process -->
+  <HowItWorks />
+
+  <!-- Educational Content & Mathematical Guides -->
+  <MathGuides />
+
+  <!-- E-E-A-T Trust Signals & Precision Standards -->
+  <EeatTrustBadge />
+
+  <!-- Authoritative Scientific & Government References -->
+  <OfficialResources />
+
+  <!-- Frequently Asked Questions Accordion -->
+  <FaqSection />
+
+  <!-- Comprehensive Multi-Column Footer Link Hub -->
+  <Footer />
+</Layout>
+
+<script>
+  import '../scripts/tools.js';
+</script>

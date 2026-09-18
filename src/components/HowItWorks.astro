@@ -1,0 +1,48 @@
+---
+// How It Works Interactive Process Component
+const steps = [
+  {
+    num: "01",
+    title: "Select Tool or Mode",
+    desc: "Use the primary calculator for general math, toggle SCI for trigonometry/exponents, or choose a specialized mini-tool below.",
+    badge: "Step 1"
+  },
+  {
+    num: "02",
+    title: "Enter Values or Use Keyboard",
+    desc: "Type via your physical keyboard/numpad or click the tactile buttons. Parentheses, sign toggles, and functions are auto-formatted.",
+    badge: "Step 2"
+  },
+  {
+    num: "03",
+    title: "Instant Answer & 1-Click Copy",
+    desc: "Results evaluate in real time with IEEE 754 precision. Click the copy icon to copy the answer or review the calculation tape history.",
+    badge: "Step 3"
+  }
+];
+---
+
+<section class="how-it-works-section" id="how-it-works">
+  <div class="section-header">
+    <div class="section-badge">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+      </svg>
+      <span data-i18n="how_badge">Seamless Experience</span>
+    </div>
+    <h2 class="section-title" data-i18n="how_title">How Simple Calculator Works in 3 Simple Steps</h2>
+    <p class="section-subtitle">Three easy steps to fast, reliable, and mathematically accurate calculations</p>
+  </div>
+
+  <div class="steps-grid">
+    {steps.map((step) => (
+      <div class="step-card">
+        <div class="step-num-badge">{step.num}</div>
+        <span class="step-tag">{step.badge}</span>
+        <h3 class="step-title">{step.title}</h3>
+        <p class="step-desc">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>

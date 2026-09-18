@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Main Home & Simple Calculator -->
+  <url>
+    <loc>https://onlinecalculator.app/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Standard Calculator -->
+  <url>
+    <loc>https://onlinecalculator.app/#calculator</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Scientific Calculator (Trigonometry, Logarithms & Powers) -->
+  <url>
+    <loc>https://onlinecalculator.app/#scientific-panel</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Percentage Calculator Tool -->
+  <url>
+    <loc>https://onlinecalculator.app/#tool-percentage</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Discount & GST / Tax Calculator Tool -->
+  <url>
+    <loc>https://onlinecalculator.app/#tool-discount</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Universal Unit Converter Tool -->
+  <url>
+    <loc>https://onlinecalculator.app/#tool-unit</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Body Mass Index (BMI) Health Calculator Tool -->
+  <url>
+    <loc>https://onlinecalculator.app/#tool-bmi</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Exact Age & Birthday Calculator Tool -->
+  <url>
+    <loc>https://onlinecalculator.app/#tool-age</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SILO Topical Authority Hubs -->
+  <url>
+    <loc>https://onlinecalculator.app/#silo-section</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Mathematical Guides, Formulas & PEMDAS Rules -->
+  <url>
+    <loc>https://onlinecalculator.app/#guides-section</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Official Scientific & Government Standards Resources -->
+  <url>
+    <loc>https://onlinecalculator.app/#resources-section</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Frequently Asked Questions (FAQ) -->
+  <url>
+    <loc>https://onlinecalculator.app/#faq-section</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- E-E-A-T Verification & Methodology -->
+  <url>
+    <loc>https://onlinecalculator.app/#about-methodology</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

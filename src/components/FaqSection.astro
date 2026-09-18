@@ -1,0 +1,70 @@
+---
+// FAQ Accordion Section Component with contextual internal links
+const faqs = [
+  {
+    q: "How do I switch between Standard and Scientific mode?",
+    a: "Click on the 'SCI' button in the calculator header to expand scientific controls like Trigonometry (sin, cos, tan), Logarithms (log, ln), and Powers. See our <a href='#guides-section' class='inline-link'>Standard vs Scientific Guide</a> for a full breakdown.",
+    id: "faq-modes"
+  },
+  {
+    q: "Does this calculator support keyboard shortcuts?",
+    a: "Yes! Use your physical keyboard: 0-9 for digits, + - * / for basic operators, Enter/= to evaluate, Backspace to delete, and Esc to clear (AC).",
+    id: "faq-shortcuts"
+  },
+  {
+    q: "How does the calculation history work?",
+    a: "Past calculations are saved locally in your browser storage. Click the clock icon in the header to open the history drawer. Click any past calculation to restore it into the active display.",
+    id: "faq-history"
+  },
+  {
+    q: "Where can I calculate percentages, discounts, or BMI?",
+    a: "Scroll to our <a href='#tools-section' class='inline-link'>Helpful Calculation Tools</a> section below the calculator to access the <a href='#tool-percentage' class='inline-link'>Percentage Calculator</a>, <a href='#tool-discount' class='inline-link'>Discount/GST Tool</a>, <a href='#tool-bmi' class='inline-link'>BMI Health Calculator</a>, and <a href='#tool-unit' class='inline-link'>Unit Converter</a>.",
+    id: "faq-tools"
+  },
+  {
+    q: "How do I toggle between Radians and Degrees for Trigonometry?",
+    a: "In Scientific mode, click the 'RAD' / 'DEG' button on the bottom-right of the scientific panel. We use standard math trigonometric functions documented on <a href='https://mathworld.wolfram.com/Trigonometry.html' target='_blank' rel='noopener noreferrer' class='inline-ext-link'>Wolfram MathWorld &#8599;</a>.",
+    id: "faq-trig"
+  },
+  {
+    q: "Is my calculation data private and secure?",
+    a: "100% private. All computations and history are evaluated locally on your device without sending any calculation telemetry to external servers.",
+    id: "faq-privacy"
+  }
+];
+---
+
+<section class="faq-section" id="faq-section">
+  <div class="section-header">
+    <div class="section-badge">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span data-i18n="faq_badge">Got Questions?</span>
+    </div>
+    <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Everything you need to know about using this online calculator</p>
+  </div>
+
+  <div class="faq-accordion-list">
+    {faqs.map((faq, index) => (
+      <div class="faq-item" id={faq.id} data-index={index}>
+        <button type="button" class="faq-question-btn" aria-expanded="false">
+          <span class="faq-question-text">{faq.q}</span>
+          <div class="faq-icon-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-answer-pane">
+          <div class="faq-answer-content">
+            <p set:html={faq.a}></p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

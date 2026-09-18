@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="calcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Body -->
+  <rect x="6" y="4" width="52" height="56" rx="12" fill="url(#bodyGrad)" stroke="url(#calcGrad)" stroke-width="2.5"/>
+
+  <!-- Screen -->
+  <rect x="12" y="10" width="40" height="14" rx="5" fill="#090d16" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+  <rect x="36" y="15" width="12" height="4" rx="2" fill="#38bdf8"/>
+
+  <!-- Button Grid -->
+  <!-- Row 1 -->
+  <circle cx="18" cy="32" r="3.5" fill="#f87171"/>
+  <circle cx="28" cy="32" r="3.5" fill="#818cf8"/>
+  <circle cx="38" cy="32" r="3.5" fill="#818cf8"/>
+  <circle cx="48" cy="32" r="3.5" fill="#fbbf24"/>
+
+  <!-- Row 2 -->
+  <circle cx="18" cy="41" r="3.5" fill="#94a3b8"/>
+  <circle cx="28" cy="41" r="3.5" fill="#94a3b8"/>
+  <circle cx="38" cy="41" r="3.5" fill="#94a3b8"/>
+  <circle cx="48" cy="41" r="3.5" fill="#fbbf24"/>
+
+  <!-- Row 3 -->
+  <circle cx="18" cy="50" r="3.5" fill="#94a3b8"/>
+  <circle cx="28" cy="50" r="3.5" fill="#94a3b8"/>
+  <circle cx="38" cy="50" r="3.5" fill="#38bdf8"/>
+  <circle cx="48" cy="50" r="3.5" fill="url(#calcGrad)"/>
+</svg>
