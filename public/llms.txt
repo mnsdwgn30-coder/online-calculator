@@ -4,7 +4,7 @@
 
 ## Website Overview
 - **Name**: Online Calculator / Simple Calculator
-- **URL**: https://online-calculator.vercel.app/
+- **URL**: https://online-calculator.pages.dev/
 - **Technology Stack**: Astro, Vanilla JavaScript (ESNext), Modern Glassmorphism CSS
 - **Licensing**: Free for public use
 

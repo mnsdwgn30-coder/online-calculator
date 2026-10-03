@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://online-calculator.vercel.app/sitemap.xml
+Sitemap: https://online-calculator.pages.dev/sitemap.xml

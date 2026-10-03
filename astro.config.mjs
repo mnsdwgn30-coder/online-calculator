@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://online-calculator.vercel.app',
+  site: 'https://online-calculator.pages.dev',
   output: 'static',
   build: {
     format: 'directory'
