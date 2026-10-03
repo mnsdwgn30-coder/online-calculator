@@ -8,6 +8,7 @@
     "start": "astro dev --host --ignore-lock",
     "build": "astro build",
     "preview": "astro preview --host",
+    "deploy": "wrangler pages deploy dist --project-name=online-calculator",
     "astro": "astro"
   },
   "engines": {
