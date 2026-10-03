@@ -13,24 +13,40 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
 });
 
-// Tools Tab Switching
+// Tools Tab Switching & Direct Link Support
 function initToolsTabs() {
   const tabs = document.querySelectorAll('.tool-tab-btn');
   const panels = document.querySelectorAll('.tool-panel');
 
+  function switchTab(targetId) {
+    if (!targetId) return;
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.target === targetId));
+    panels.forEach(p => p.classList.toggle('active', p.id === targetId));
+  }
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const targetId = tab.dataset.target;
-      tabs.forEach(t => t.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
+      switchTab(tab.dataset.target);
+    });
+  });
 
-      tab.classList.add('active');
-      const targetPanel = document.getElementById(targetId);
-      if (targetPanel) {
-        targetPanel.classList.add('active');
+  // Handle direct clicks on popular tools or external hash links
+  document.querySelectorAll('a[href^="#tool-"]').forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      const targetId = href.replace('#', '');
+      switchTab(targetId);
+      const targetSection = document.getElementById('tools-section');
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
+
+  if (window.location.hash && window.location.hash.startsWith('#tool-')) {
+    const targetId = window.location.hash.replace('#', '');
+    switchTab(targetId);
+  }
 }
 
 // 0. Trigonometric Theta (θ) Calculator & Ratio Finder

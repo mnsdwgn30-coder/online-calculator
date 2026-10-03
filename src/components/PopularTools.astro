@@ -5,6 +5,7 @@ const popularTools = [
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>`,
     title: "Percentage Calculator",
     badge: "Popular",
+    category: "popular",
     desc: "Calculate percentages of numbers, tax portions, and ratio calculations instantly in real-time.",
     target: "#tool-percentage",
     cta: "Calculate %"
@@ -13,6 +14,7 @@ const popularTools = [
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>`,
     title: "Discount & GST Calculator",
     badge: "Finance",
+    category: "finance",
     desc: "Find final shopping prices after percentage discounts, coupons, and GST/sales tax additions.",
     target: "#tool-discount",
     cta: "Calculate Price"
@@ -21,6 +23,7 @@ const popularTools = [
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>`,
     title: "Universal Unit Converter",
     badge: "Standards",
+    category: "standards",
     desc: "Convert metric & imperial measurements across Length, Mass/Weight, and Temperature scales.",
     target: "#tool-unit",
     cta: "Convert Units"
@@ -29,6 +32,7 @@ const popularTools = [
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`,
     title: "BMI Health Calculator",
     badge: "Health",
+    category: "health",
     desc: "Assess body mass index score according to World Health Organization clinical standards.",
     target: "#tool-bmi",
     cta: "Check BMI"
@@ -37,6 +41,7 @@ const popularTools = [
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>`,
     title: "Exact Age Calculator",
     badge: "Utility",
+    category: "utility",
     desc: "Find exact lived years, months, and days with automated leap-year date math and birthday timer.",
     target: "#tool-age",
     cta: "Calculate Age"
@@ -45,6 +50,7 @@ const popularTools = [
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="3"></rect><line x1="16" y1="14" x2="16" y2="14"></line><line x1="12" y1="14" x2="12" y2="14"></line><line x1="8" y1="14" x2="8" y2="14"></line></svg>`,
     title: "Scientific Calculator Suite",
     badge: "Advanced",
+    category: "advanced",
     desc: "Compute complex trigonometry (sin, cos, tan), natural logarithms (ln, log), and exponents (xʸ).",
     target: "#calculator",
     cta: "Launch Scientific"
@@ -66,15 +72,19 @@ const popularTools = [
 
   <div class="popular-grid">
     {popularTools.map((tool) => (
-      <a href={tool.target} class="popular-tool-card" title={`Open ${tool.title}`}>
+      <a href={tool.target} class={`popular-tool-card cat-${tool.category}`} title={`Open ${tool.title}`}>
         <div class="pop-card-top">
           <div class="pop-icon-wrap" set:html={tool.icon} />
-          <span class="pop-badge">{tool.badge}</span>
+          <span class={`pop-badge badge-${tool.category}`}>{tool.badge}</span>
         </div>
         <h3 class="pop-title">{tool.title}</h3>
         <p class="pop-desc">{tool.desc}</p>
         <div class="pop-card-footer">
-          <span class="pop-cta-text">{tool.cta} &rarr;</span>
+          <span class="pop-cta-text">{tool.cta}</span>
+          <svg class="pop-cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </div>
       </a>
     ))}

@@ -61,6 +61,11 @@ class CalculatorApp {
     this.degRadBtn = document.getElementById('deg-rad-btn');
     this.soundIconOn = document.getElementById('sound-icon-on');
     this.soundIconOff = document.getElementById('sound-icon-off');
+    this.calcInputPreview = document.getElementById('calc-input-preview');
+    this.stationModeTag = document.getElementById('station-mode-tag');
+    this.btnActionCopy = document.getElementById('btn-action-copy');
+    this.btnActionClear = document.getElementById('btn-action-clear');
+    this.copyTooltip = document.getElementById('copy-tooltip');
 
     // Theta (θ) Elements inside SCI
     this.sciThetaBox = document.getElementById('sci-theta-box');
@@ -79,6 +84,19 @@ class CalculatorApp {
   }
 
   initEventListeners() {
+    // Quick Answer Action Buttons
+    if (this.btnActionCopy) {
+      this.btnActionCopy.addEventListener('click', () => {
+        this.copyToClipboard();
+      });
+    }
+
+    if (this.btnActionClear) {
+      this.btnActionClear.addEventListener('click', () => {
+        this.playSound(350, 'square', 0.05);
+        this.clearAll();
+      });
+    }
     // Theme Toggle (Light / Dark)
     if (this.btnThemeToggle) {
       this.btnThemeToggle.addEventListener('click', () => {
@@ -765,8 +783,17 @@ class CalculatorApp {
 
   updateDisplay() {
     if (!this.displayExpression || !this.displayResult) return;
-    this.displayExpression.textContent = this.formatExpressionDisplay(this.expression);
-    this.displayResult.textContent = this.isEvaluated ? this.result : (this.expression ? this.expression.slice(-15) : '0');
+    const formattedExp = this.formatExpressionDisplay(this.expression);
+    this.displayExpression.textContent = formattedExp;
+    this.displayResult.textContent = this.isEvaluated ? this.result : (this.expression ? this.expression.slice(-18) : '0');
+
+    if (this.calcInputPreview) {
+      this.calcInputPreview.textContent = formattedExp || 'Ready';
+    }
+
+    if (this.stationModeTag) {
+      this.stationModeTag.textContent = `${this.isAngleRad ? 'RAD' : 'DEG'} Mode`;
+    }
   }
 
   addToHistory(exp, res) {
@@ -784,7 +811,7 @@ class CalculatorApp {
     }
 
     this.historyList.innerHTML = this.history.map((item, idx) => `
-      <div class="history-item" data-index="${idx}">
+      <div class="history-item" data-index="${idx}" title="Click to reuse ${item.res}">
         <span class="history-exp">${this.formatExpressionDisplay(item.exp)} =</span>
         <span class="history-res">${item.res}</span>
       </div>
@@ -813,6 +840,10 @@ class CalculatorApp {
     navigator.clipboard.writeText(textToCopy).then(() => {
       this.playSound(600, 'sine', 0.04);
       this.showToast(`Copied "${textToCopy}"`);
+      if (this.copyTooltip) {
+        this.copyTooltip.classList.add('show');
+        setTimeout(() => this.copyTooltip.classList.remove('show'), 1600);
+      }
     }).catch(() => {
       this.showToast('Could not copy to clipboard');
     });
